@@ -1,5 +1,5 @@
-package com.kardji.main.entidades;
-// Generated 25 mar. 2021 18:27:02 by Hibernate Tools 5.2.12.Final
+package com.kardji.entidades;
+// Generated 27 mar. 2021 17:10:37 by Hibernate Tools 5.2.12.Final
 
 import java.util.Date;
 import java.util.HashSet;

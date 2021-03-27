@@ -1,4 +1,4 @@
-package com.kardji.main;
+package com.kardji;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

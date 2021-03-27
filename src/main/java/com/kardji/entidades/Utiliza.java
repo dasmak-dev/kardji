@@ -1,5 +1,5 @@
-package com.kardji.main.entidades;
-// Generated 25 mar. 2021 18:27:02 by Hibernate Tools 5.2.12.Final
+package com.kardji.entidades;
+// Generated 27 mar. 2021 17:10:37 by Hibernate Tools 5.2.12.Final
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
@@ -46,7 +46,9 @@ public class Utiliza implements java.io.Serializable {
 	@EmbeddedId
 
 	@AttributeOverrides({
+			@AttributeOverride(name = "idModalidad", column = @Column(name = "idModalidad", nullable = false)),
 			@AttributeOverride(name = "idLeccion", column = @Column(name = "idLeccion", nullable = false)),
+			@AttributeOverride(name = "idUsuario", column = @Column(name = "idUsuario", nullable = false)),
 			@AttributeOverride(name = "fecha", column = @Column(name = "fecha", nullable = false)) })
 	public UtilizaId getId() {
 		return this.id;
@@ -67,7 +69,7 @@ public class Utiliza implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idModalidad", nullable = false)
+	@JoinColumn(name = "idModalidad", nullable = false, insertable = false, updatable = false)
 	public Modalidades getModalidades() {
 		return this.modalidades;
 	}
@@ -77,7 +79,7 @@ public class Utiliza implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idUsuario", nullable = false)
+	@JoinColumn(name = "idUsuario", nullable = false, insertable = false, updatable = false)
 	public Usuarios getUsuarios() {
 		return this.usuarios;
 	}

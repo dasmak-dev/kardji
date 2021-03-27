@@ -1,5 +1,5 @@
-package com.kardji.main.entidades;
-// Generated 25 mar. 2021 18:27:02 by Hibernate Tools 5.2.12.Final
+package com.kardji.entidades;
+// Generated 27 mar. 2021 17:10:37 by Hibernate Tools 5.2.12.Final
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -11,15 +11,28 @@ import javax.persistence.Embeddable;
 public class UtilizaId implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
+	private int idModalidad;
 	private int idLeccion;
+	private int idUsuario;
 	private String fecha;
 
 	public UtilizaId() {
 	}
 
-	public UtilizaId(int idLeccion, String fecha) {
+	public UtilizaId(int idModalidad, int idLeccion, int idUsuario, String fecha) {
+		this.idModalidad = idModalidad;
 		this.idLeccion = idLeccion;
+		this.idUsuario = idUsuario;
 		this.fecha = fecha;
+	}
+
+	@Column(name = "idModalidad", nullable = false)
+	public int getIdModalidad() {
+		return this.idModalidad;
+	}
+
+	public void setIdModalidad(int idModalidad) {
+		this.idModalidad = idModalidad;
 	}
 
 	@Column(name = "idLeccion", nullable = false)
@@ -29,6 +42,15 @@ public class UtilizaId implements java.io.Serializable {
 
 	public void setIdLeccion(int idLeccion) {
 		this.idLeccion = idLeccion;
+	}
+
+	@Column(name = "idUsuario", nullable = false)
+	public int getIdUsuario() {
+		return this.idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 
 	@Column(name = "fecha", nullable = false)
@@ -49,7 +71,9 @@ public class UtilizaId implements java.io.Serializable {
 			return false;
 		UtilizaId castOther = (UtilizaId) other;
 
-		return (this.getIdLeccion() == castOther.getIdLeccion())
+		return (this.getIdModalidad() == castOther.getIdModalidad())
+				&& (this.getIdLeccion() == castOther.getIdLeccion())
+				&& (this.getIdUsuario() == castOther.getIdUsuario())
 				&& ((this.getFecha() == castOther.getFecha()) || (this.getFecha() != null
 						&& castOther.getFecha() != null && this.getFecha().equals(castOther.getFecha())));
 	}
@@ -57,7 +81,9 @@ public class UtilizaId implements java.io.Serializable {
 	public int hashCode() {
 		int result = 17;
 
+		result = 37 * result + this.getIdModalidad();
 		result = 37 * result + this.getIdLeccion();
+		result = 37 * result + this.getIdUsuario();
 		result = 37 * result + (getFecha() == null ? 0 : this.getFecha().hashCode());
 		return result;
 	}
