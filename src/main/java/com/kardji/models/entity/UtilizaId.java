@@ -1,4 +1,4 @@
-package com.kardji.entidades;
+package com.kardji.models.entity;
 // Generated 27 mar. 2021 17:10:37 by Hibernate Tools 5.2.12.Final
 
 import javax.persistence.Column;
