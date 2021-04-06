@@ -16,13 +16,13 @@ public class CartasServiceImpl implements ICartasService {
 	private ICartasDao cartasDao;
 	
 	@Override
-	@Transactional(readOnly=true)
+	@Transactional(readOnly=true) 
 	public List<Cartas> findAll() {
 		return (List<Cartas>) cartasDao.findAll();
 	}
 
 	@Override
-	public Cartas findeById(int id) {
+	public Cartas findById(int id) {
 		return cartasDao.findById(id).orElse(null);
 	}
 

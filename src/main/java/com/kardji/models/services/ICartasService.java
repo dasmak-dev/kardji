@@ -8,5 +8,5 @@ public interface ICartasService {
 	
 	public List<Cartas> findAll();
 	
-	public Cartas findeById(int id);
+	public Cartas findById(int id);
 }

@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kardji.models.entity.Cartas;
-import com.kardji.models.services.ICartasService;
+import com.kardji.models.entity.Lecciones;
+import com.kardji.models.services.ILeccionesService;
 
 @CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
-public class CartasController {
+public class LeccionesController {
 
 	@Autowired(required=true)
-	private ICartasService cartasService;
+	private ILeccionesService leccionesService;
 	
-	@GetMapping("/cartas")
-	public List<Cartas> index() {
-		return cartasService.findAll();
+	@GetMapping("/lecciones")
+	public List<Lecciones> index() {
+		return leccionesService.findAll();
 	}
 	
-	@GetMapping("/cartas/{id}")
-	public Cartas show(@PathVariable int id) {
-		return cartasService.findById(id);
+	@GetMapping("/lecciones/{id}")
+	public Lecciones show(@PathVariable int id) {
+		return leccionesService.findById(id);
 		
 	}
 	
