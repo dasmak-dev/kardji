@@ -24,7 +24,7 @@ public class Cartas implements java.io.Serializable {
 	private String keyWord;
 	private String shortStory;
 	private String asComponent;
-	private String imageUrl;
+	private String kanjiChar;
 
 	public Cartas() {
 	}
@@ -39,7 +39,7 @@ public class Cartas implements java.io.Serializable {
 		this.keyWord = keyWord;
 		this.shortStory = shortStory;
 		this.asComponent = asComponent;
-		this.imageUrl = imageUrl;
+		this.kanjiChar = imageUrl;
 	}
 
 	@Id
@@ -91,13 +91,13 @@ public class Cartas implements java.io.Serializable {
 		this.asComponent = asComponent;
 	}
 
-	@Column(name = "imageUrl")
-	public String getImageUrl() {
-		return this.imageUrl;
+	@Column(name = "kanjiChar")
+	public String getKanjiChar() {
+		return this.kanjiChar;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setKanjiChar(String imageUrl) {
+		this.kanjiChar = imageUrl;
 	}
 
 }
