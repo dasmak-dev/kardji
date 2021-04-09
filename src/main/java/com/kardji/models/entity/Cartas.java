@@ -73,7 +73,7 @@ public class Cartas implements java.io.Serializable {
 		this.keyWord = keyWord;
 	}
 
-	@Column(name = "shortStory")
+	@Column(name = "shortStory", length = 2048)
 	public String getShortStory() {
 		return this.shortStory;
 	}
