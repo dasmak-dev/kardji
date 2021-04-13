@@ -9,4 +9,6 @@ public interface ICartasService {
 	public List<Cartas> findAll();
 	
 	public Cartas findById(int id);
+	
+	public List<Cartas> findByLesson(int lessonId);
 }

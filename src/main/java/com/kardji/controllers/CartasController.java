@@ -31,4 +31,9 @@ public class CartasController {
 		
 	}
 	
+	@GetMapping("/cartasByLesson/{lessonId}")
+	public List<Cartas> getByLesson(@PathVariable int lessonId) {
+		return cartasService.findByLesson(lessonId);
+	}
+	
 }
