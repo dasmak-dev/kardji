@@ -28,7 +28,6 @@ public class LeccionesController {
 	@GetMapping("/lecciones/{id}")
 	public Lecciones show(@PathVariable int id) {
 		return leccionesService.findById(id);
-		
 	}
 	
 }
