@@ -9,4 +9,6 @@ public interface IUsuarioService {
 	public List<Usuarios> findAll();
 	
 	public Usuarios findById(int id);
+	
+	public Usuarios save(Usuarios usuario);
 }
