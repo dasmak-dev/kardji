@@ -41,11 +41,7 @@ public class UsuariosController {
 	public Usuarios create(@RequestBody Usuarios users) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		System.out.println(users.getId() + ", " + users.getName() + ", " + users.getPassword());
-		System.out.println("********************************************************************************************");
-		System.out.println("********************************************************************************************");
-		System.out.println("********************************************************************************************");
-		System.out.println("********************************************************************************************");
-		System.out.println("********************************************************************************************");
+		
 		users.setRegisterDate(dtf.format(LocalDateTime.now()));
 		users.setLastLogIn(dtf.format(LocalDateTime.now()));
 		usuariosService.save(users);

@@ -59,7 +59,7 @@ public class Utiliza implements java.io.Serializable {
 		this.id = id;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne()
 	@JoinColumn(name = "idLeccion", nullable = false, insertable = false, updatable = false)
 	public Lecciones getLecciones() {
 		return this.lecciones;
@@ -69,7 +69,7 @@ public class Utiliza implements java.io.Serializable {
 		this.lecciones = lecciones;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne()
 	@JoinColumn(name = "idModalidad", nullable = false, insertable = false, updatable = false)
 	public Modalidades getModalidades() {
 		return this.modalidades;
@@ -79,7 +79,7 @@ public class Utiliza implements java.io.Serializable {
 		this.modalidades = modalidades;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne()
 	@JoinColumn(name = "idUsuario", nullable = false, insertable = false, updatable = false)
 	public Usuarios getUsuarios() {
 		return this.usuarios;
