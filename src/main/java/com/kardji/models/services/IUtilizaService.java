@@ -10,4 +10,6 @@ public interface IUtilizaService {
 	public List<Utiliza> findAll();
 	
 	public Utiliza findById(UtilizaId id);
+
+	public Utiliza save(Utiliza utiliza);
 }
