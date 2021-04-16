@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kardji.controllers.dto.ResponseLoginDto;
 import com.kardji.controllers.dto.UserLoginDto;
+import com.kardji.controllers.dto.UserRegisterDto;
 import com.kardji.models.entity.Usuarios;
 import com.kardji.models.services.UsuarioServiceImpl;
 import com.kardji.security.SecurityConstants;
@@ -40,6 +41,13 @@ public class AuthController {
 		} else {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
 		}
+	}
+	
+	@PostMapping("/register")
+	public ResponseEntity<Void> register(@RequestBody UserRegisterDto userDto) throws NoSuchAlgorithmException {
+		usersService.register(userDto);
+		
+		return ResponseEntity.status(HttpStatus.CREATED).body(null); 
 	}
 	
 	private String getToken(Usuarios user) {	
