@@ -17,9 +17,7 @@ import com.kardji.models.entity.Utiliza;
 import com.kardji.models.entity.UtilizaId;
 import com.kardji.models.services.IUtilizaService;
 
-@CrossOrigin(origins= {"*"})
 @RestController
-@RequestMapping("/api")
 public class UtilizaController {
 	
 	@Autowired(required=true)

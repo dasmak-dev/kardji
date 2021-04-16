@@ -1,5 +1,6 @@
 package com.kardji.models.services;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,5 @@ public class UtilizaServiceImpl implements IUtilizaService {
 	public Utiliza save(Utiliza utiliza) {
 		return utilizaDao.save(utiliza);
 	}
-	
+
 }

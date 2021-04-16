@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kardji.models.entity.Cartas;
 import com.kardji.models.services.ICartasService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
-@RequestMapping("/api")
 public class CartasController {
 
 	@Autowired(required=true)
