@@ -1,5 +1,6 @@
 package com.kardji.models.services;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,4 +31,10 @@ public class UsuarioServiceImpl implements IUsuarioService {
 	public Usuarios save(Usuarios usuario) {
 		return usuariosDao.save(usuario);
 	}
+	
+	@Override
+	public Usuarios login(String name, String password) throws NoSuchAlgorithmException {
+		return this.usuariosDao.login(name, password);
+	}
+	
 }

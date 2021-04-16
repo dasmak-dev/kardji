@@ -18,9 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kardji.models.entity.Usuarios;
 import com.kardji.models.services.IUsuarioService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
-@RequestMapping("/api")
 public class UsuariosController {
 
 	@Autowired(required=true)

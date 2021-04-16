@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kardji.models.entity.Lecciones;
 import com.kardji.models.services.ILeccionesService;
 
-@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
-@RequestMapping("/api")
 public class LeccionesController {
 
 	@Autowired(required=true)
