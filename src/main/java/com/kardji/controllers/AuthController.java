@@ -45,6 +45,7 @@ public class AuthController {
 	private String getToken(Usuarios user) {	
 		Map<String, Object> data = new HashMap<String, Object>();
 		
+		data.put("id", user.getId());
 		data.put("name", user.getName());
 		data.put("authorities", Arrays.asList("ROLE_USER"));
 		

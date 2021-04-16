@@ -3,6 +3,7 @@ package com.kardji.controllers.dto;
 import java.io.Serializable;
 
 public class UserLoginDto implements Serializable {
+	private int id;
 	private String name;
 	private String password;
 	
@@ -20,5 +21,13 @@ public class UserLoginDto implements Serializable {
 	
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
